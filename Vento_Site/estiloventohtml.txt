@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estilo Vento</title>
+    <style> 
+
+    body{
+        background-color: powderblue;
+    }
+    h1{
+        color: grey;
+    }
+
+    </style>
+</head>
+<body>
+        <section>
+            <header>
+                <h1>Liberação de Vento</h1>
+                <hr>
+                <h4>O que ele é?</h4>
+                <h5>Vento é uma das cinco áreas elementares básicas de transformação da natureza.<br> Ela é executada ao moldar o chakra para se tornar o mais afiado e fino possível.<br> A Liberação de Vento consiste principalmente de técnicas ofensivas de curto a<br> médio alcance que combinam força bruta e precisão para causar danos cortantes.</h5>
+                <img src="https://vignette.wikia.nocookie.net/naruto/images/f/ff/S%C3%ADmbolo_Vento.svg/revision/latest?cb=20150906163223&path-prefix=pt-br" alt="some text" width=60 height=40><h6>Este é o simbolo<br> do Estilo Vento</h6>
+                <hr>
+                <h4>Relções com outras Naturezas</h4>
+                <h5>&bull; Vento é forte contra relâmpago por ser um isolante elétrico natural, mas é fraco contra fogo devido as chamas serem alimentadas pelo ar.</h5>
+                <img src="https://vignette.wikia.nocookie.net/naruto/images/6/6a/Diagrama_de_Relacionamento_Elemental.svg/revision/latest?cb=20140915040524&path-prefix=pt-br" alt="some text" width=150 height=130>
+                <h5>&bull; Vento pode ser usado em conjunto com Fogo para aumentar a força da técnica de fogo.</h5>
+
+</body>
+</html>
