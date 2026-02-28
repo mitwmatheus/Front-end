@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Inserção do Jquery -->
+    <link rel="stylesheet" href="jquery/jquery-ui/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!--Personalização-->
+    <style>
+        #container{
+            width: 80%;
+            height: 600px;
+            margin: 1px auto;
+            border: 5px solid gray;
+        }
+
+        h2{
+            color: black;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #lembretes{
+            width:70%;
+            height:450px;
+            margin:0px auto;
+        }
+
+        ol li{
+            border: 1px dotted black;
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        ol li:hover{
+            background: gray;
+        }
+
+        #btnAddCategoria{
+            margin-left: 1177px;
+            margin-bottom: 5px;
+        }
+    
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#lembretes").tabs();
+            $("ul").sortable({ axis: "x", containment: "#lembretes"});
+            $("ol").sortable({ axis: "y", containment: "#lembretes"});
+            $("#btnAddCategoria").button()
+                .click(function (){
+                    $("#lembretes-dialog").dialog({
+                        width:400, resizable: false, modal: true,
+                        buttons: {
+                            "Adicionar categoria": function(){
+                                var categoriaNome = $("#nova-categoria").val();
+                                $("<li><a href='#" + categoriaNome + "'>" + categoriaNome + "</a></li>")
+                                    .appendTo("#main");
+                                $("<ol id='" + categoriaNome + "'></ol>").appendTo("#lembretes");
+                                $("#lembretes").tabs("refresh");
+                                var tabCount = $("#lembretes .ui-tabs-nav li").lenght;
+                                $("#lembretes").tabs("option","active", tabCount-1);
+
+                                $("#nova-categoria").val("");
+                                $(this).dialog("close");
+                            
+                            },
+                            "Cancelar": function(){
+                                $("novo-lembrete").val("");
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                });
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Lembretes de hoje</h2>
+        <button id="btnAddCategoria">++Categoria</button>
+        <div id="lembretes">
+            <ul id="main">
+                <li><a href="#pessoal">Pessoal</a></li>
+                <li><a href="#escola">Escola</a></li>
+            </ul>
+            <ol id="pessoal">
+                <li><input type="checkbox">Ir ao médico</li>
+                <li><input type="checkbox">Limpar a casa</li>
+            </ol>
+            <ol id="escola">
+                <li><input type="checkbox">Fazer a lição de matemática</li>
+                <li><input type="checkbox">Assistir ao ead</li>
+            </ol>
+        </div>
+        <div id="lembretes-dialog" title="Adicionar Categoria" style="display:none;">
+            <label for="nova-categoria">Nome Categoria:</label>
+            <input id="nova-categoria" type="text" />
+        </div>
+    </div>
+</body>
+
+</html>

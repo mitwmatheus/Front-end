@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Animando Elementos</title>
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function animandoElemento(anima){
+				$('#'+anima).animate({
+					'font-size': '3.5em' //ou fontSize quando houver - no atributo do css		
+				},2000,function(){ //Essa função é quando terminar o evento de 2 segundos
+					$(this).css('color','green');
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="titulo" class="jumbotron">
+				<h2 id="anima" style="color: red">ANIMANDO ELEMENTOS COM JQUERY</h2>
+			</div> 	<hr />
+			<div class="row">
+				<div class="col-md-12">
+					<button type="button" class="btn btn-danger" onclick="animandoElemento('anima')">Animação</button>
+				</div>
+			</div>
+	</body>
+</html>

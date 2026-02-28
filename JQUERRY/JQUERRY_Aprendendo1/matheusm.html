@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Validando Formulário</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title"></h1>
+        <p id="desc"></p>
+    </header>
+    <main>
+        <section>
+            <h1>Validando Formulários</h1>
+            <span id="errors"></span>
+            <form>
+                <p><input type="text" name="name" placeholder="Digite o Nome"></p>
+                <p><input type="text" name="email" placeholder="Digite o Email"></p>
+                <p><input type="text" name="tel" placeholder="Digite o Telefone"></p>
+                <p><input type="checkbox" name="term">Eu aceito os termos de uso</p>
+                <p><button id="btnEnviar" type="submit">Enviar</button></p>
+            </form>
+        </section>
+    </main>
+    <script src="js/tests_jQuery.js"></script>
+</body>
+</html>
